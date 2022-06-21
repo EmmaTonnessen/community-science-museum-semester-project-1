@@ -1,0 +1,166 @@
+/* menu */
+
+.home {
+    background-color: var(--pink);
+    padding: 5px;
+    color: #fff;
+}
+
+/* header styling */
+
+h1 {
+    font-size: 1rem;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 30px;
+    font-style: italic;
+}
+
+
+h2 {
+    font-weight: 500;
+    line-height: 28px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+/* text */
+
+p {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+
+/* Overall layout */
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.cta {
+    align-self: center;
+}
+
+/* images */ 
+
+img {
+    margin: 20px;
+}
+
+
+
+.image {
+    display: none;
+}
+
+.reaktor {
+    margin-top: 100px;
+    display: block;
+}
+
+.arrows {
+    display: none;
+}
+
+@media only screen and (min-width: 768px) {
+    /* header */
+    .science {
+        align-self: center;
+    }
+    
+    .museum {
+        align-self: flex-end;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+
+    /* image */
+
+    .reaktor {
+        margin-top: 50px;
+    }
+
+    main {
+        max-width: 800px;
+        margin: auto;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    /* layout */
+
+    main {
+        max-width: 1200px;
+    }
+
+    .text-container {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 70px 120px 80px 80px 150px;
+        grid-template-areas: 
+            'h1 reaktor'
+            'cta reaktor'
+            'p1 reaktor'
+            'p2 reaktor'
+            'p3 arrows';
+    }
+
+    .reaktor {
+        grid-area: reaktor;
+        max-width: 600px;
+        margin-top: 20px;
+    }
+
+    .arrows {
+        display: block;
+        grid-area: arrows;
+        justify-self: center;
+        align-self: center;
+        color: var(--pink);
+        cursor: pointer;
+    }
+
+    .arrow-left, .arrow-right {
+        font-size: 3rem;
+    }
+
+    /* source: https://fontawesome.com/v4.7/examples/ */
+
+    .fa-chevron-left:hover {
+        color: var(--blue);
+    }
+
+    .fa-chevron-right:hover {
+        color: var(--blue);
+    }
+
+    h1 {
+        margin-top: 20px;
+        grid-area: h1;
+    }
+
+    .cta {
+        grid-area: cta;
+        justify-self: center;
+    }
+
+    .p1 {
+        grid-area: p1;
+    }
+
+    .p2 {
+        grid-area: p2;
+    }
+
+    .p3 {
+        grid-area: p3;
+    }
+
+    .vr-briller, .mammut {
+        display: none;
+    }
+}

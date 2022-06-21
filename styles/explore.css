@@ -1,0 +1,103 @@
+/* menu */
+
+.explore {
+    background-color: var(--pink);
+    padding: 5px;
+    color: #fff;
+}
+
+/* images */
+
+img {
+    max-width: 300px;
+}
+
+/* cards/ layout */
+
+.card {
+    max-width: 300px;
+    align-self: center;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* text style */
+
+p {
+    margin: 0;
+    line-height: 25px;
+}
+
+.kids h2 {
+    color: var(--blue);
+}
+
+.teachers h2 {
+    color: var(--purple);
+}
+
+.researchers h2 {
+    color: var(--green);
+}
+
+.link {
+    text-decoration: none;
+    color: var(--blue);
+    font-style: italic;
+} 
+
+
+.bigger {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+
+
+@media only screen and (min-width: 768px) {
+
+    img {
+        max-width: 550px;
+    }
+
+    .card {
+        max-width: 550px;
+    }
+}
+
+
+@media only screen and (min-width: 1200px) {
+
+    img {
+        max-width: 350px;
+    }
+
+    .card {
+        max-width: 350px;
+    }
+
+    .card-container {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .teachers {
+        margin-left: 50px;
+        margin-right: 50px;
+        align-self: flex-start;
+    }
+
+    .kids {
+        align-self: flex-start;
+    }
+
+    .researchers {
+        align-self: flex-start;
+    }
+}
